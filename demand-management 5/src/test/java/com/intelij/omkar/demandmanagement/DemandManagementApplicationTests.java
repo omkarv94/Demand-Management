@@ -1,4 +1,4 @@
-package com.jetbrains.omkar.demandmanagement;
+package com.intelij.omkar.demandmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.jetbrains.omkar.demandmanagement;
+package com.intelij.omkar.demandmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
