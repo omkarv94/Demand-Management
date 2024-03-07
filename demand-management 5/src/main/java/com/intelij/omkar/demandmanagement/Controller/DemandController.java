@@ -27,20 +27,20 @@ public class DemandController {
         return demandService.showDemand();
     }
 
-    @GetMapping("/byLocation")
-    public ResponseEntity<List<Demand>> getDemandsByLocation(@RequestParam String location) {
-        List<Demand> demands = demandService.getDemandsByLocation(location);
+    @GetMapping("/byLocation/{location}")
+    public ResponseEntity<List<Demand>> getDemandsByLocation(@PathVariable String location) {
+        List<Demand> demands = demandService.getDemandsByLocation( location);
         return ResponseEntity.ok(demands);
     }
 
-    @GetMapping("/byManagerName")
-    public ResponseEntity<List<Demand>> getDemandsByManagerName(@RequestParam String managerName) {
-        List<Demand> demands = demandService.getDemandsByManagerName(managerName);
+    @GetMapping("/byManagerName/{managerName}")
+    public ResponseEntity<List<Demand>> getDemandsByManagerName(@PathVariable String managerName) {
+        List<Demand> demands = demandService.getDemandsByManagerName( managerName);
         return ResponseEntity.ok(demands);
     }
 
     @GetMapping("/byProjectName")
-    public ResponseEntity<List<Demand>> getDemandsByProjectName(@RequestParam String projectName) {
+    public ResponseEntity<List<Demand>> getDemandsByProjectName(@PathVariable String projectName) {
         List<Demand> demands = demandService.getDemandsByProjectName(projectName);
         return ResponseEntity.ok(demands);
     }

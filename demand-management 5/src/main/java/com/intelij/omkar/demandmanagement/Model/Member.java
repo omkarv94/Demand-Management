@@ -40,12 +40,11 @@ public class Member {
 
     private float overallExp;
 
-    private enum StatusChoices {
+    public enum StatusChoice {
         AVAILABLE, ASSIGNED
     }
-
     @Enumerated(EnumType.STRING)
-    private StatusChoices status = StatusChoices.AVAILABLE;
+    private StatusChoice status = StatusChoice.AVAILABLE;
 
     @Enumerated(EnumType.STRING)
     private LevelChoices level;
@@ -67,12 +66,12 @@ public class Member {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public StatusChoices getStatus() {
+    public StatusChoice getStatus() {
         return status;
     }
 
     @Column
-    public void setStatus(StatusChoices status) {
+    public void setStatus(StatusChoice status) {
         this.status = status;
     }
 
